@@ -183,7 +183,7 @@ function AdminPage({ isLoggedIn, onNeedLogin }) {
         <h2 className="text-lg font-semibold mb-2">Product List</h2>
         <div className="space-y-2">
           {products
-            .filter(p => !filterCategoryId || p.category_id == filterCategoryId)
+            .filter(p => !filterCategoryId || p.category_id === filterCategoryId)
             .map(p => (
               <div key={p.id} className="border p-2 rounded flex justify-between items-center">
                 <span>{p.name} - ${p.price}</span>
