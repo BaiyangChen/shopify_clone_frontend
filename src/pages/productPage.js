@@ -8,7 +8,7 @@ function ProductsPage({ isLoggedIn, onNeedLogin }) { //拿到app js的两个参�
   const categories = ['all', ...Array.from(new Set(
     products.map(p => p.category?.name).filter(Boolean)
   ))];
-  
+
   useEffect(() => {
     fetchProducts()
       .then(res => setProducts(res.data))
@@ -42,7 +42,9 @@ function ProductsPage({ isLoggedIn, onNeedLogin }) { //拿到app js的两个参�
         <h1 className="text-2xl font-bold mb-4">Product</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {products
-            .filter(product => selectedCategory === 'all' || product.category === selectedCategory)
+            .filter(product =>
+              selectedCategory === 'all' ||
+              product.category?.name === selectedCategory)
             .map(product => (
             <div key={product.id} className="border p-4 rounded shadow bg-white">
               <img src={product.image_url} alt={product.name} className="w-full h-40 object-cover mb-2" />
