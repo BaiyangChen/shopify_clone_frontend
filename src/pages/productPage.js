@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 function ProductsPage({ isLoggedIn, onNeedLogin }) { //拿到app js的两个参数
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))];
-
+  const categories = ['all', ...Array.from(new Set(
+    products.map(p => p.category?.name).filter(Boolean)
+  ))];
+  
   useEffect(() => {
     fetchProducts()
       .then(res => setProducts(res.data))
