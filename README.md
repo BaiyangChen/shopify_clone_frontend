@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Shopify Clone – Full-Stack E-commerce Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack Shopify-style e-commerce platform built with **Ruby on Rails (API-only)** on the backend, **React** on the frontend, and **PostgreSQL** as the database. It allows users to browse products, add them to a cart, and simulate order processing with secure login functionality.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **Frontend**: React + Tailwind CSS  
+- **Backend**: Ruby on Rails (API-only)  
+- **Database**: PostgreSQL  
+- **Authentication**: JWT (JSON Web Token)  
+- **Deployment**:
+  - Frontend: [Netlify]([https://www.netlify.com/](https://ornate-starburst-7d9747.netlify.app/))
+  - Backend + Database: [Render](https://shopify-clone-api.onrender.com/products) *(free-tier)*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- User registration and login with JWT-based authentication
+- Product catalog browsing
+- Add to cart / remove from cart
+- Order simulation with checkout flow
+- Admin interface for product management (optional)
+- Responsive UI with Tailwind CSS
+- API integration between frontend and backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation (Local Development)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Backend Setup (Rails API)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+cd backend
+bundle install
+rails db:create db:migrate
+rails s
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 2. Frontend Setup (React)
+```bash
+cd frontend
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Developer Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you encounter CORS issues, make sure to update config/initializers/cors.rb in your Rails API to include your frontend URL.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Render's free PostgreSQL database goes to sleep when idle — be sure to "wake it up" by visiting the backend endpoint before accessing the frontend.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## About Me
+Hi! I'm Baiyang Chen, a Computer Science student based in Montreal, passionate about full-stack development.
+I built this project to deepen my understanding of backend APIs, frontend integration, authentication, and cloud deployment using modern tools.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to check out more of my work or connect with me:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+GitHub: https://github.com/baiyangchen
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+LinkedIn: https://linkedin.com/in/baiyang-chen
