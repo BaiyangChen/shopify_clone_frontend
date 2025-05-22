@@ -11,7 +11,7 @@ This project is a full-stack Shopify-style e-commerce platform built with **Ruby
 - **Database**: PostgreSQL  
 - **Authentication**: JWT (JSON Web Token)  
 - **Deployment**:
-  - Frontend: [Netlify]([https://www.netlify.com/](https://ornate-starburst-7d9747.netlify.app/))
+  - Frontend: [Netlify]([https://www.netlify.com/](https://ornate-starburst-7d9747.netlify.app/)
   - Backend + Database: [Render](https://shopify-clone-api.onrender.com/products) *(free-tier)*
 
 ---
